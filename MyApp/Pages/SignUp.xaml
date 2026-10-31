@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.SignUp"
+             Title="SignUp">
+    
+    <VerticalStackLayout Spacing="40" VerticalOptions="Center">
+
+        <Label Text="Sign up"
+               FontSize="40"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+
+        <Entry Placeholder="Enter Name"
+               IsPassword="False"
+               Keyboard="Text"
+               x:Name="UserName"
+               Unfocused="UserName_Unfocused"/> <!--this is user name entry-->
+
+        <Label x:Name="UserNameErrorLabel"
+               TextColor="Red"
+               Opacity="0"
+               Margin="0,-30,0,0"/> <!--this is user name error-->
+
+        <Entry Placeholder="Enter Email"
+               IsPassword="False"
+               Keyboard="Email"
+               x:Name="ValidEmail"
+               Unfocused="ValidEmail_Unfocused"/> <!--this is email entry-->
+
+        <Label x:Name="EmailErrorLabel"
+               TextColor="Red"
+               Opacity="0"
+               Margin="0,-30,0,0"/> <!--this is email error-->
+
+        <Entry Placeholder="Enter Password"
+               IsPassword="True"
+               Keyboard="Password"
+               x:Name="Password"
+               Unfocused="PassWord_Unfocused"/> <!--this is password entry-->
+
+        <Label x:Name="PasswordErrorLabel"
+               TextColor="Red"
+               Opacity="0"
+               Margin="0,-30,0,0"/> <!--this is password error-->
+
+        <Entry Placeholder="Confirm Password"
+               IsPassword="True"
+               Keyboard="Password"
+               Unfocused="ConfirmPassWord_Unfocused"
+               x:Name="ConfirmPassword"/> <!--this is confirm password entry-->
+
+        <Label x:Name="ConfirmPasswordErrorLabel"
+               TextColor="Red"
+               Opacity="0"
+               Margin="0,-30,0,0"/> <!--this is confrim password error-->
+
+        <Button Text="Sign up"
+                CornerRadius="10"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

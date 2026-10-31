@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.SignIn"
+             Title="SignIn">
+    <VerticalStackLayout Spacing="40" VerticalOptions="Center">
+        
+        <Entry Placeholder="Enter Name"
+               IsPassword="False"
+               MaxLength="50"
+               Keyboard="Text"/>
+
+        <Border Stroke="Gray" 
+        BackgroundColor="White"
+        HeightRequest="50"
+        VerticalOptions="Center">
+
+            <Grid ColumnDefinitions="*, Auto" VerticalOptions="Center">
+                
+                <Entry x:Name="PasswordEntry"
+               IsPassword="True"
+               Placeholder="Enter your password"
+               BackgroundColor="Transparent"
+               Grid.Column="0"
+               VerticalOptions="Center" />
+
+                <Button x:Name="TogglePasswordButton"
+                Text="&#xe8f4;"
+                FontFamily="MyMaterialIcons"
+                FontSize="22"
+                BackgroundColor="Transparent"
+                TextColor="Gray"
+                Padding="0"
+                WidthRequest="40"
+                HeightRequest="40"
+                Grid.Column="1"
+                VerticalOptions="Center"
+                Clicked="OnTogglePasswordClicked" />
+            </Grid>
+            
+        </Border>
+
+        <Button Text="Sign in"
+                CornerRadius="10"/>
+        
+    </VerticalStackLayout>
+</ContentPage>
