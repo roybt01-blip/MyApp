@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.Pages.SignIn2"
+             xmlns:views="clr-namespace:MyApp.ViewModels"
+             x:DataType="views:SignInViewModel"
+             Title="SignIn2">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#FFB6C1" Offset="0.0" />
+            <GradientStop Color="#FF69B4" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout
+        Padding="30"
+        Spacing="25"
+        VerticalOptions="Center">
+
+            <Label Text="Sign in"
+               TextColor="Snow"
+               FontSize="40"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+            <Border
+                Padding="10"
+                Stroke="#ccc"
+                StrokeShape="RoundRectangle 8"
+                StrokeThickness="1">
+
+            <Entry Placeholder="Enter UserName"
+               PlaceholderColor="LightGray"
+               IsPassword="False"
+               MaxLength="20"
+               ReturnType="Go"
+               Text="{Binding UserName}">
+            </Entry>
+            </Border>
+
+        <Border
+            StrokeShape="RoundRectangle 8"
+            Stroke="#ccc"
+            StrokeThickness="1">
+            <Grid ColumnDefinitions="*,Auto"
+                  Padding="10"
+                  VerticalOptions="Center">
+                <Entry Grid.Column="0"
+                       Placeholder="Enter Password"
+                       PlaceholderColor="LightGray"
+                       IsPassword="True"
+                       MaxLength="20"
+                       TextColor="Wheat"
+                       VerticalOptions="Center"
+                       Text="{Binding UserPassword}"/>
+                <Button Grid.Column="1"
+                        Margin="5,0,0,0"
+                        Padding="0"
+                        FontFamily="MyMaterialIcons"
+                        BackgroundColor="Transparent"
+                        FontSize="24"
+                        HorizontalOptions="End"
+                        Text="&#xe8f4;"
+                        VerticalOptions="Center"/>
+            </Grid>
+        </Border>
+        <Button
+            CornerRadius="8"
+            FontSize="18"
+            HeightRequest="50"
+            IsEnabled="{Binding IsSignInButtonEnabled}"
+            Text="Sign In"
+            TextColor="White"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

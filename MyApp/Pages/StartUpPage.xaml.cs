@@ -1,3 +1,5 @@
+using MyApp.Pages;
+
 namespace MyApp;
 
 public partial class StartUpPage : ContentPage
@@ -8,7 +10,7 @@ public partial class StartUpPage : ContentPage
 	}
     private async void SignInButton(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new SignIn());
+        await Navigation.PushAsync(new SignIn2());
     }
     private async void SignUpButton(object sender, EventArgs e)
     {
